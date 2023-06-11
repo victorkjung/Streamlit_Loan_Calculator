@@ -18,7 +18,7 @@ Requirements:
 
 Usage:
 1. Clone the repository:
-   $ git clone [https://github.com/victorkjung/streamlit_loan_calculator]
+   $ git clone https://github.com/victorkjung/Streamlit_loan_calculor.git
 
 2. Install the dependencies:
    $ pip install streamlit
