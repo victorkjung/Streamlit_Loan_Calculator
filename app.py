@@ -65,3 +65,4 @@ if calculate:
     b64 = base64.b64encode(csv.encode()).decode()  # some strings
     href = f'<a href="data:file/csv;base64,{b64}" download="schedule.csv">Click Here to download as CSV file</a> (click link and save as &lt;some_name&gt;.csv)'
     st.markdown(href, unsafe_allow_html=True)
+
