@@ -13,7 +13,7 @@ def amortization_schedule(loan_amount, interest_rate, years):
     monthly_payment = loan_amount * monthly_interest_rate / (1 - (1 + monthly_interest_rate) ** (-payment_num))
 
     # Initialize amortization schedule
-    schedule = pd.DataFrame()
+    schedule = pd.DataFrame(columns=['Month', 'Payment', 'Principal', 'Interest', 'Ending Balance'])
     balance = loan_amount
 
     for i in range(int(payment_num)):
@@ -29,9 +29,7 @@ def amortization_schedule(loan_amount, interest_rate, years):
             "Ending Balance": balance,
         }, ignore_index=True)
 
-    schedule = schedule[['Month', 'Payment', 'Principal', 'Interest', 'Ending Balance']]
     return monthly_payment, schedule
-
 
 # Streamlit code
 st.title(f"Loan \U0001F4C8 Calculator")
@@ -65,4 +63,6 @@ if calculate:
     b64 = base64.b64encode(csv.encode()).decode()  # some strings
     href = f'<a href="data:file/csv;base64,{b64}" download="schedule.csv">Click Here to download as CSV file</a> (click link and save as &lt;some_name&gt;.csv)'
     st.markdown(href, unsafe_allow_html=True)
+    
+
 
