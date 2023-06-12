@@ -52,9 +52,9 @@ st.sidebar.write("4. You can download the amortization schedule as a **CSV file*
 
 # About developer section
 st.sidebar.subheader("About the developer")
-st.sidebar.write("Victor Jung is a serial entrepreneur and technology hobbyist. He is passionate about building innovative solutions and leveraging technology to solve real-world problems. With a diverse background in business and technology, Victor has successfully launched and managed multiple ventures.")
+st.sidebar.write("**Victor Jung** is a serial entrepreneur and technology hobbyist. He is passionate about building innovative solutions and leveraging technology to solve real-world problems. With a diverse background in business and technology, Victor has successfully launched and managed multiple ventures.")
 
-st.sidebar.write("This loan calculator was developed using PyCharm, a powerful integrated development environment (IDE), and GitHub Co-Pilot, an AI-powered coding assistant. The collaboration between Victor and GitHub Co-Pilot streamlined the programming process, ensuring efficient code generation and error correction.")
+st.sidebar.write("This loan calculator was developed using **PyCharm**, a powerful integrated development environment (IDE), and **GitHub Co-Pilot**, an AI-powered coding assistant. The collaboration between Victor and GitHub Co-Pilot streamlined the programming process, ensuring efficient code generation and error correction.")
 
 # Guidance for loan calculator
 st.sidebar.subheader("Guidance on Loan Payments")
