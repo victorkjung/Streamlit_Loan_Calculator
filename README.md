@@ -1,4 +1,4 @@
-# Streamlit_loan_calculor
+# Streamlit_Loan_Calculator
 Loan Calculator - Streamlit App
 
 This is a simple loan calculator application built using Streamlit, a popular Python library for creating interactive web apps. This app is part of a series of financial calculators aimed at helping users with various financial calculations.
