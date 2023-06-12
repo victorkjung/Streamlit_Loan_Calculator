@@ -53,7 +53,11 @@ if calculate:
     monthly_payment, schedule = amortization_schedule(loan_amount, interest_rate, years)
 
     # Display the monthly payment
-    st.markdown(f'<h4>; Your Monthly Loan Payment is: **$**{monthly_payment:,.2f};</h4>')
+    st.markdown(f'Your Monthly Loan Payment is: **$**{monthly_payment:,.2f}')
+    
+    st.markdown(f"""<style>h4 {font-size: 20px;}</style> Your Monthly Loan Payment is: **$**{monthly_payment:,.2f}
+""", unsafe_allow_html=True)
+
 
     # Format the schedule for display
     schedule["Payment"] = schedule["Payment"].apply(lambda x: '{:,.2f}'.format(x))
