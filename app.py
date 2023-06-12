@@ -38,6 +38,18 @@ def amortization_schedule(loan_amount, interest_rate, years):
     return monthly_payment, schedule
 
 # Streamlit code
+st.sidebar.title("Loan Calculator")
+
+# Add a description to the sidebar
+st.sidebar.write("Welcome to the Loan Calculator. This tool helps you calculate the monthly payment for a loan and provides an amortization schedule.")
+
+# Add instructions to the sidebar
+st.sidebar.subheader("Instructions:")
+st.sidebar.write("1. Enter the loan amount, annual interest rate, and loan period in years.")
+st.sidebar.write("2. Click on the '**Calculate Now**' button.")
+st.sidebar.write("3. The monthly payment and amortization schedule will be displayed.")
+st.sidebar.write("4. You can download the amortization schedule as a **CSV file**.")
+
 st.title(f"Loan \U0001F4C8 Calculator")
 st.title(f"\U0001F64B What is our monthly payment?")
 
@@ -53,8 +65,8 @@ if calculate:
     monthly_payment, schedule = amortization_schedule(loan_amount, interest_rate, years)
 
     # Display the monthly payment
-    st.markdown(f'Your Monthly Loan Payment is: ${monthly_payment:,.2f}')
-    
+    st.markdown(f'<h4>Your Monthly Loan Payment is: ${monthly_payment:,.2f}</h4>', unsafe_allow_html=True)
+ 
     # Format the schedule for display
     schedule["Payment"] = schedule["Payment"].apply(lambda x: '{:,.2f}'.format(x))
     schedule["Principal"] = schedule["Principal"].apply(lambda x: '{:,.2f}'.format(x))
