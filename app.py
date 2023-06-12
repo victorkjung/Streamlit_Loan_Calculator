@@ -50,6 +50,20 @@ st.sidebar.write("2. Click on the '**Calculate Now**' button.")
 st.sidebar.write("3. The monthly payment and amortization schedule will be displayed.")
 st.sidebar.write("4. You can download the amortization schedule as a **CSV file**.")
 
+# About developer section
+st.sidebar.subheader("About the developer")
+st.sidebar.write("Victor Jung is a serial entrepreneur and technology hobbyist. He is passionate about building innovative solutions and leveraging technology to solve real-world problems. With a diverse background in business and technology, Victor has successfully launched and managed multiple ventures.")
+
+st.sidebar.write("This loan calculator was developed using PyCharm, a powerful integrated development environment (IDE), and GitHub Co-Pilot, an AI-powered coding assistant. The collaboration between Victor and GitHub Co-Pilot streamlined the programming process, ensuring efficient code generation and error correction.")
+
+# Guidance for loan calculator
+st.sidebar.subheader("Guidance on Loan Payments")
+st.sidebar.write("The loan calculator provided can give you an estimate of your potential monthly payment for a loan. However, it's important to note that actual loan payments can vary based on various factors, such as the lender's calculation methods, compounding interest, and other specific loan terms.")
+
+st.sidebar.write("To get the most accurate payment estimate, it's recommended to consult with your lender or financial advisor. They can provide personalized guidance based on your unique financial situation and the specific terms of your loan.")
+
+st.sidebar.write("Please use this loan calculator as a reference and starting point for understanding the potential monthly payment of your loan.")
+
 st.title(f"Loan \U0001F4C8 Calculator")
 st.title(f"\U0001F64B What is our monthly payment?")
 
