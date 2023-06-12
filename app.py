@@ -21,13 +21,19 @@ def amortization_schedule(loan_amount, interest_rate, years):
         principal = monthly_payment - interest
         balance = balance - principal
 
-        schedule = schedule.append({
+        # Add a new row to the schedule DataFrame with the following values:
+        # Month: i + 1
+        # Payment: monthly_payment
+        # Principal: principal
+        # Interest: interest
+        # Ending Balance: balance
+        schedule.loc[len(schedule)] = {
             "Month": i + 1,
             "Payment": monthly_payment,
             "Principal": principal,
             "Interest": interest,
             "Ending Balance": balance,
-        }, ignore_index=True)
+        }
 
     return monthly_payment, schedule
 
@@ -63,6 +69,3 @@ if calculate:
     b64 = base64.b64encode(csv.encode()).decode()  # some strings
     href = f'<a href="data:file/csv;base64,{b64}" download="schedule.csv">Click Here to download as CSV file</a> (click link and save as &lt;some_name&gt;.csv)'
     st.markdown(href, unsafe_allow_html=True)
-    
-
-
