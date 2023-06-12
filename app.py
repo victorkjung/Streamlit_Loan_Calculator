@@ -54,7 +54,7 @@ if calculate:
 
     # Display the monthly payment
     st.markdown(f'Your Monthly Loan Payment is: **$**{monthly_payment:,.2f}')
-
+    
     # Format the schedule for display
     schedule["Payment"] = schedule["Payment"].apply(lambda x: '{:,.2f}'.format(x))
     schedule["Principal"] = schedule["Principal"].apply(lambda x: '{:,.2f}'.format(x))
